@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Website</title>
+    <script>
+        function scrollToProduct(productNumber) {
+            document.querySelector('.scroll-container').style.transform = `translateX(-${(productNumber - 1) * 100}vw)`;
+        }
+        
+        function showMessage(product) {
+            alert(`You are viewing details for ksh{product}`);
+        }
+    </script>
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+        }
+        .scroll-container {
+            display: flex;
+            width: 500vw;
+            transition: transform 0.5s ease-in-out;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            border-right: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        h1, p, table {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+        p {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="scrollToProduct(1); showMessage('Shoes');">Shoes</a>
+        <a href="#" onclick="scrollToProduct(2); showMessage('Jeans');">Jeans</a>
+        <a href="#" onclick="scrollToProduct(3); showMessage('Jewellery');">Jewellery</a>
+        <a href="#" onclick="scrollToProduct(4); showMessage('Toys');">Toys</a>
+        <a href="#" onclick="scrollToProduct(5); showMessage('Kitchen Appliances');">Kitchen Appliances</a>
+    </nav>
+
+    <div class="scroll-container">
+        <div class="container">
+            <img src="C:\Users\User\Downloads\Nike Store.jpeg" class="bg-image">
+            <h1>Shoes - Best in the Market!</h1>
+            <img src="C:\Users\User\Downloads\adidas Originals Samba OG.jpeg" alt="Adidas Sambas" width="300" height="300">
+            <p>Get shoes that are comfortable, affordable, and built to last. Grab yours today and enjoy style that stays with you</p>
+            <table>
+                <tr><th>Shoes</th><th>Price</th></tr>
+                <tr><td>Timberlands</td><td>Ksh 3900</td></tr>
+                <tr><td>Adidas Samba</td><td>Ksh 2500</td></tr>
+                <tr><td>Converse</td><td>Ksh 1900</td></tr>
+            </table>
+            <img src="C:\Users\User\Downloads\NEW BALANCE 480 Shoes - WHT_GREEN _ Tillys.jpeg" alt="New Balance" width="300" height="300">
+        </div>
+
+        <div class="container">
+            <img src="C:\Users\User\Downloads\a656f88b-7870-4eda-a88e-ee595c272ab6.jpeg" class="bg-image">
+            <h1>Jeans - High Quality and Stylish</h1>
+            <img src="C:\Users\User\Downloads\596bb6a7-78bd-4df7-aeb5-d13125be7915.jpeg" alt="Blue Baggy Jeans" width="300" height="300">
+            <p>Experience unmatched durability and classic fashion with our jeans.</p>
+            <table>
+                <tr><th>Jeans</th><th>Price</th></tr>
+                <tr><td>Blue Baggy Jeans</td><td>Ksh 1700</td></tr>
+                <tr><td>Off White Men's Jeans</td><td>Ksh 1500</td></tr>
+                <tr><td>Vintage Jeans</td><td>Ksh 2100</td></tr>
+            </table>
+            <img src="C:\Users\User\Downloads\Denim Parachute Jean _ boohooMAN USA.jpeg" alt="grey Baggy Jeans" width="300" height="300">
+        </div>
+
+        <div class="container">
+            <img src="C:\Users\User\Downloads\00af55e0-c1b4-4599-8ac0-59e9d5af3d12.jpeg" class="bg-image">
+            <h1>Jewellery - Elegant and Stylish!</h1>
+             <img src="C:\Users\User\Downloads\Statement Pendants & Jewelry.jpeg" alt="Jewellery" width="300" height="300">
+            <p>Get jewelry that elevates your style with elegance and charm. Perfect for any occasion, it adds the perfect touch to every look.</p>
+            <table>
+                <tr><th>Jewellery</th><th>Price</th></tr>
+                <tr><td>Beaded Necklace</td><td>Ksh 300</td></tr>
+                <tr><td>Gold Bracelets</td><td>Ksh 450</td></tr>
+                <tr><td>Silver Earrings</td><td>Ksh 240</td></tr>
+            </table>
+             <img src="C:\Users\User\Downloads\Set di bracciale e anelli in argento - 66 _ 68 _ Silver.jpeg" alt="Jewellery" width="300" height="300">
+        </div>
+
+        <div class="container">
+            <img src="C:\Users\User\Downloads\Toy Kingdom - Toy Store Design _ Chute Gerdeman.jpeg" class="bg-image">
+            <h1>Toys - Fun and Exciting!</h1>
+            <img src="C:\Users\User\Downloads\Iconic Kids Bikes, Cruiser Bikes, eBikes, and More _ Huffy.jpeg" width="300" height="300">
+            <p>Toys that bring endless fun and spark imagination. Designed for all-day play, they make every moment more exciting.</p>
+            <table>
+                <tr><th>Toys</th><th>Price</th></tr>
+                <tr><td>Remote Car</td><td>Ksh 1100</td></tr>
+                <tr><td>Teddy Bear</td><td>Ksh 600</td></tr>
+                <tr><td>Building Blocks</td><td>Ksh 770</td></tr>
+            </table>
+             <img src="C:\Users\User\Downloads\HABA Basic Building Blocks 102 Piece Extra Large Wooden Starter Set (4).jpeg" alt="Building blocks" width="300" height="300">
+        </div>
+
+        <div class="container">
+            <img src="C:\Users\User\Downloads\12 Boho Kitchen Decorating Ideas.jpeg" class="bg-image">
+            <h1>Kitchen Appliances - Ultimate Performance!</h1>
+             <img src="C:\Users\User\Downloads\Ninja professional kitchen blender.jpeg" alt="Blender" width="300" height="300">
+           
+            <p>Upgrade your kitchen with appliances that make cooking easier and more enjoyable. Durable, efficient, and stylish, perfect for every home</p>
+            <table>
+                <tr><th>appliance</th><th>Price</th></tr>
+                <tr><td>Air fryer</td><td>Ksh 14000</td></tr>
+                <tr><td>Blender</td><td>Ksh 4700</td></tr>
+                <tr><td>Microwave</td><td>Ksh 5700</td></tr>
+            </table>
+             <img src="C:\Users\User\Downloads\The 7 BEST Air Fryers of 2024 (1).jpeg" alt="Air fryer" width="300" height="300">
+        </div>
+    </div>
+</body>
+</html>
+
